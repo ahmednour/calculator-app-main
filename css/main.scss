@@ -1,0 +1,395 @@
+/* variables */
+
+// theme 1 
+// background color
+$mainBg1: hsl(222, 26%, 31%);
+$toggleBg1: hsl(223, 31%, 20%);
+$screenBg1: hsl(224, 36%, 15%);
+// keys color 
+$keyBg1: hsl(225, 21%, 49%);
+$keySh1: hsl(224, 28%, 35%);
+$keyBgTo1: hsl(6, 63%, 50%);
+$keyShadow1: hsl(6, 70%, 34%);
+$keyLightBg1: hsl(30, 25%, 89%);
+$keyLightSh1: hsl(28, 16%, 65%);
+// text 
+$TextBlue: hsl(221, 14%, 31%);
+$White: hsl(0, 0, 100%);
+// Theme 2
+// Backgrounds
+$mainBg2: hsl(0, 0%, 90%);
+$toggleBg2: hsl(0, 5%, 81%);
+$screenBg2: hsl(0, 0%, 93%);
+// Keys
+$keyBg2: hsl(185, 42%, 37%);
+$keySh2: hsl(185, 58%, 25%);
+$keyBgTo2: hsl(25, 98%, 40%);
+$keyShadow2: hsl(25, 99%, 27%);
+$keyLightBg2: hsl(45, 7%, 89%);
+$keyLightSh2: hsl(35, 11%, 61%);
+// Text 
+$TextYellow: hsl(60, 10%, 19%);
+//Theme 3
+//Backgrounds
+$mainBg3: hsl(268, 75%, 9%);
+$toggleBg3: hsl(268, 71%, 12%);
+$keypadBg3: hsl(268, 71%, 12%);
+$screenBg3: hsl(268, 71%, 12%);
+// Keys 
+$keyBg3: hsl(281, 89%, 26%);
+$keySh3: hsl(285, 91%, 52%);
+$keyBgTo3: hsl(176, 100%, 44%);
+$keyShadow3: hsl(177, 92%, 70%);
+$keyDarkBg3: hsl(268, 47%, 21%);
+$keyDarkSh3: hsl(290, 70%, 36%);
+// Text 
+$TextLightYellow: hsl(52, 100%, 62%);
+$VeryDarkBlue: hsl(198, 20%, 13%);
+// font size
+$FontSize: 32px;
+$FontFamily: 'Spartan',
+sans-serif;
+// grid  width 
+$DW:1440px;
+$MW:375px;
+@import url("reset.scss");
+// body style 
+body {
+    font-size: $FontSize;
+    font-family: $FontFamily;
+    height: 100vh;
+    .container {
+        padding: 0 136px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        align-items: stretch;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .calc {
+            width: 40%;
+            .calcHead {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                z-index: 10;
+                h1 {
+                    margin: 30px 0;
+                }
+                .themeSw {
+                    display: flex;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: space-between;
+                    span {
+                        display: block;
+                        margin-right: 16px;
+                        font-size: 20px;
+                    }
+                    .inputParent {
+                        position: relative;
+                        height: 22px;
+                        width: 60px;
+                        border-radius: 25px;
+                        input[type="radio"] {
+                            position: absolute;
+                            opacity: 0;
+                            &:checked+label {
+                                color: #eee;
+                                -webkit-transition-delay: 180ms;
+                                -moz-transition-delay: 180ms;
+                                transition-delay: 180ms;
+                            }
+                            &:nth-of-type(1):checked+label~.switch,
+                            &:nth-of-type(1):checked+label:nth-of-type(1)~.switch {
+                                -webkit-transform: translateX(0px);
+                                -moz-transform: translateX(0px);
+                                -ms-transform: translateX(0px);
+                                -o-transform: translateX(0px);
+                                transform: translateX(0px);
+                            }
+                            &:nth-of-type(2):checked+label~.switch,
+                            &:nth-of-type(2):checked+label:nth-of-type(2)~.switch {
+                                -webkit-transform: translateX(20px);
+                                -moz-transform: translateX(20px);
+                                -ms-transform: translateX(20px);
+                                -o-transform: translateX(20px);
+                                transform: translateX(20px);
+                            }
+                            &:nth-of-type(3):checked+label~.switch,
+                            &:nth-of-type(3):checked+label:nth-of-type(3)~.switch {
+                                -webkit-transform: translateX(40px);
+                                -moz-transform: translateX(40px);
+                                -ms-transform: translateX(40px);
+                                -o-transform: translateX(40px);
+                                transform: translateX(40px);
+                            }
+                        }
+                        label {
+                            position: relative;
+                            z-index: 1;
+                            display: inline-block;
+                            float: left;
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            cursor: pointer;
+                            font-size: 12px;
+                            color: rgb(158, 158, 158);
+                            transition: all 500ms ease-in-out;
+                            &:nth-of-type(1)::after {
+                                position: absolute;
+                                content: "1";
+                                top: -20px;
+                                text-align: center;
+                                display: block;
+                                width: 20px;
+                            }
+                            &:nth-of-type(2)::after {
+                                position: absolute;
+                                content: "2";
+                                top: -20px;
+                                text-align: center;
+                                display: block;
+                                width: 20px;
+                            }
+                            &:nth-of-type(3)::after {
+                                position: absolute;
+                                content: "3";
+                                top: -20px;
+                                text-align: center;
+                                display: block;
+                                width: 20px;
+                            }
+                        }
+                        .switch {
+                            /*floatingbackground*/
+                            position: absolute;
+                            top: 3px;
+                            left: 3px;
+                            height: 16px;
+                            width: 16px;
+                            -webkit-transition: transform 0.5s;
+                            -moz-transition: transform 0.5s;
+                            transition: transform 0.5s;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            -ms-transition: transform 0.5s;
+                            -o-transition: transform 0.5s;
+                        }
+                    }
+                }
+            }
+            .calcBody {
+                .calcScreen {
+                    height: 150px;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                    font-size: 50px;
+                    display: flex;
+                    flex-direction: row;
+                    align-content: center;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 0 30px;
+                }
+                .calcBodyButton {
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                    margin-top: 20px;
+                    padding: 30px;
+                    display: -ms-grid;
+                    display: grid;
+                    -ms-grid-columns: auto auto auto auto;
+                    grid-template-columns: 22% 22% 22% 22%;
+                    grid-gap: 6% 4%;
+                    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px;
+                    a.calcButton {
+                        padding: 18px 0;
+                        text-align: center;
+                        text-decoration: none;
+                        border-radius: 10px;
+                        -webkit-border-radius: 10px;
+                        -moz-border-radius: 10px;
+                        -ms-border-radius: 10px;
+                        -o-border-radius: 10px;
+                        &.equal,
+                        &.reset {
+                            grid-column: span 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.theme1 {
+        background-color: $mainBg1;
+        .container {
+            .calc {
+                .calcHead {
+                    h1 {
+                        color: $White;
+                    }
+                    .themeSw {
+                        span {
+                            color: $White;
+                        }
+                        .inputParent {
+                            background-color: $toggleBg1;
+                            .switch {
+                                background-color: $keyBgTo1;
+                            }
+                        }
+                    }
+                }
+                .calcBody {
+                    .calcScreen {
+                        background-color: $screenBg1;
+                        color: $White;
+                    }
+                    .calcBodyButton {
+                        background-color: $toggleBg1;
+                        a.calcButton {
+                            background-color: $keyLightBg1;
+                            box-shadow: 0 5px 0px $keyLightSh1;
+                            color: $TextBlue;
+                            &.del,
+                            &.reset {
+                                background-color: $keyBg1;
+                                box-shadow: 0 5px 0px $keySh1;
+                                color: $White;
+                            }
+                            &.equal {
+                                background-color: $keyBgTo1;
+                                box-shadow: 0 5px 0px $keyShadow1;
+                                color: $White;
+                            }
+                            &:focus {
+                                box-shadow: inset 0 5px 0 $keyLightSh1 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.theme2 {
+        background-color: $mainBg2;
+        .container {
+            .calc {
+                .calcHead {
+                    h1 {
+                        color: $TextYellow;
+                    }
+                    .themeSw {
+                        span {
+                            color: $TextYellow;
+                        }
+                        .inputParent {
+                            background-color: $toggleBg2;
+                            .switch {
+                                background-color: $keyBgTo2;
+                            }
+                        }
+                    }
+                }
+                .calcBody {
+                    .calcScreen {
+                        background-color: $screenBg2;
+                        color: $TextYellow;
+                    }
+                    .calcBodyButton {
+                        background-color: $toggleBg2;
+                        a.calcButton {
+                            background-color: $keyLightBg2;
+                            box-shadow: 0 5px 0px $keyLightSh2;
+                            color: $TextYellow;
+                            &.del,
+                            &.reset {
+                                background-color: $keyBg2;
+                                box-shadow: 0 5px 0px $keySh2;
+                                color: $White;
+                            }
+                            &.equal {
+                                background-color: $keyBgTo2;
+                                box-shadow: 0 5px 0px $keyShadow2;
+                                color: $White;
+                            }
+                            &:focus {
+                                box-shadow: inset 0 5px 0 $keyLightSh2 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.theme3 {
+        background-color: $mainBg3;
+        .container {
+            .calc {
+                .calcHead {
+                    h1 {
+                        color: $TextLightYellow;
+                    }
+                    .themeSw {
+                        span {
+                            color: $TextLightYellow;
+                        }
+                        .inputParent {
+                            background-color: $toggleBg3;
+                            .switch {
+                                background-color: $keyBgTo3;
+                            }
+                        }
+                    }
+                }
+                .calcBody {
+                    .calcScreen {
+                        background-color: $screenBg3;
+                        color: $TextLightYellow;
+                    }
+                    .calcBodyButton {
+                        background-color: $toggleBg3;
+                        a.calcButton {
+                            background-color: $keyDarkBg3;
+                            box-shadow: 0 5px 0px $keyDarkSh3;
+                            color: $TextLightYellow;
+                            &.del,
+                            &.reset {
+                                background-color: $keyBg3;
+                                box-shadow: 0 5px 0px $keySh3;
+                                color: $White;
+                            }
+                            &.equal {
+                                background-color: $keyBgTo3;
+                                box-shadow: 0 5px 0px $keyShadow3;
+                                color: $White;
+                            }
+                            &:focus {
+                                box-shadow: inset 0 5px 0 $keyDarkSh3 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
