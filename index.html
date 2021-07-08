@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="theme1">
+
+    <div class="container">
+        <div class="calc">
+            <div class="calcHead">
+                <h1 class="title">calc</h1>
+                <div class="themeSw">
+                    <span>THEME</span>
+                    <div class="inputParent">
+                        <input id="theme1" name="theme" type="radio" checked>
+                        <label for="theme1"></label>
+                        <input id="theme2" name="theme" type="radio">
+                        <label for="theme2"></label>
+                        <input id="theme3" name="theme" type="radio">
+                        <label for="theme3"></label>
+                        <span class="switch md-whiteframe-z1"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="calcBody">
+                <div class="calcScreen">
+                    399.981
+                </div>
+                <div class="calcBodyButton">
+                    <a href="" class="calcButton">7</a>
+                    <a href="" class="calcButton">8</a>
+                    <a href="" class="calcButton">9</a>
+                    <a href="" class="calcButton del">DEL</a>
+                    <a href="" class="calcButton">4</a>
+                    <a href="" class="calcButton">5</a>
+                    <a href="" class="calcButton">6</a>
+                    <a href="" class="calcButton plus">+</a>
+                    <a href="" class="calcButton">1</a>
+                    <a href="" class="calcButton">2</a>
+                    <a href="" class="calcButton">3</a>
+                    <a href="" class="calcButton mins">-</a>
+                    <a href="" class="calcButton dot">.</a>
+                    <a href="" class="calcButton">0</a>
+                    <a href="" class="calcButton slash">/</a>
+                    <a href="" class="calcButton multipl">×</a>
+                    <a href="" class="calcButton reset">RESET</a>
+                    <a href="" class="calcButton equal">=</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
