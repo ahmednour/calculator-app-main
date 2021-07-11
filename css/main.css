@@ -222,6 +222,7 @@ body .container .calc .calcBody .calcBodyButton {
 body .container .calc .calcBody .calcBodyButton a.calcButton {
   padding: 18px 0;
   text-align: center;
+  cursor: pointer;
   text-decoration: none;
   border-radius: 10px;
   -webkit-border-radius: 10px;
